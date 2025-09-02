@@ -1,0 +1,35 @@
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+}
+
+/* Grid layout for posts - 3 columns on large screens */
+@media (min-width: 1200px) {
+  .post-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2 columns on medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 column on small screens */
+@media (max-width: 767px) {
+  .post-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.post-list-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
